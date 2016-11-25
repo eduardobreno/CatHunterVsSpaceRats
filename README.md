@@ -1,4 +1,4 @@
 # CatHunterVsSpaceRats
 
-### Demonstração
-[DEMO](https://eduardobreno.github.io/CatHunterVsSpaceRats/)
+### Pages
+[Github pages](https://eduardobreno.github.io/CatHunterVsSpaceRats/)
