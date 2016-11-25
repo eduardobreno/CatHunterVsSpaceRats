@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="isGameOver" sid="145668828548830" static="0" type="number">0</variable>
+        <variable constant="0" name="countTime" sid="254376690640767" static="0" type="number">10</variable>
+        <variable constant="0" name="can_shoot" sid="167726484522073" static="0" type="number">1</variable>
+        <variable constant="0" name="aim_speed" sid="770991633745292" static="0" type="number">6</variable>
+        <variable constant="0" name="max_bullets" sid="988336348782605" static="0" type="number">6</variable>
+        <variable constant="0" name="bullets" sid="580761955322004" static="0" type="number">0</variable>
+        <event-block sid="757938538732506">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="947870658001344" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="304709139232407" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+                <action id="2" name="Stop" sid="153496066482626" type="canhao" />
+                <action id="2" name="Stop" sid="587948472694598" type="hud_bullet" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="556108884424227" title="Enemy">
+            <sub-events>
+                <event-block sid="516170187645205">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="502799446925468" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="568886462441714" type="System">
+                            <param id="0" name="Variable">isGameOver</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="466072760690178" type="System">
+                            <param id="0" name="First value">Enemy1.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="825150233419356">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="578317057949499" type="Enemy1">
+                                    <param id="0" name="Object">Enemy1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="914717367550056" type="System">
+                                    <param id="0" name="Object to create">Enemy1</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(spawn1.X,spawn1.X+spawn1.Width)</param>
+                                    <param id="3" name="Y">random(spawn1.Y,spawn4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115210800284083">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="414599184276620" type="Enemy1">
+                                    <param id="0" name="Object">Enemy1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="547948040250623" type="System">
+                                    <param id="0" name="Object to create">Enemy1</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(spawn2.X,spawn2.X+spawn2.Width)</param>
+                                    <param id="3" name="Y">random(spawn2.Y,spawn3.Y)</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="271226103894680" type="Enemy1">
+                                    <param id="0" name="Degrees">180</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="421480934753457" type="Enemy1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="365881121648717">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="189269318907380" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="444880183998049" type="Enemy1">
+                            <param id="0" name="Distance">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801838379640580">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="968320182115800" type="Enemy1" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="662079495477945" type="Enemy1">
+                            <param id="0" name="Object">Wall1</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="682644066509267" type="Enemy1">
+                            <param id="0" name="Object">Wall3</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="878323429868621" type="Enemy1">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="747040036857967" type="Enemy1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="134505727049746" type="Enemy1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="650609237878226" type="Enemy1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="714108385267281" title="Rules">
+            <sub-events>
+                <event-block sid="500714253998719">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="345306595879971" type="System">
+                            <param id="0" name="Interval (seconds)">countTime</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="921496035753934">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="786983219882694" type="System">
+                                    <param id="0" name="First value">Enemy1.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="480039444799132" type="Wall1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="843508395734825" type="Wall2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="717939469300930" type="Wall3">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="572205608663255" type="Enemy1">
+                                    <param id="0" name="X">Wall2.X</param>
+                                    <param id="1" name="Y">Wall2.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="587798353705073" type="System">
+                                    <param id="0" name="Variable">isGameOver</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="346424119499526">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="571300479352927" type="Enemy1" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="613353206085671" type="Enemy1" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="765820311649449">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="165019444905209" type="System">
+                                    <param id="0" name="First value">isGameOver</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="379612578550407">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="768716513767223" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="835180609667928" type="System">
+                                            <param id="0" name="Object to create">EnemyKing</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">random(spawnKing1.X,spawnKing1.X+spawnKing1.Width)</param>
+                                            <param id="3" name="Y">random(spawnKing1.Y,spawnKing2.Y)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="3" name="Accelerate" sid="220375433297408" type="EnemyKing">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Acceleration">50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="829418126326462" title="Weapon Events">
+            <sub-events>
+                <event-block sid="901269599274898">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="612026917930364" type="System">
+                            <param id="0" name="First value">bullets</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="327336968595187" type="System">
+                            <param id="0" name="First value">can_shoot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="282052270829446" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="114955969048311" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="244655648984469" type="System">
+                            <param id="0" name="Variable">can_shoot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="564926796422999" type="canhao">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="291746858609844" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="237162835260613" type="canhao">
+                            <param id="0" name="Object">bala</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="588169055531390" type="System">
+                            <param id="0" name="Variable">can_shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="270759277915600" type="System">
+                            <param id="0" name="Variable">bullets</param>
+                            <param id="1" name="Value">bullets-1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="179328148795576" type="hud_bullet">
+                            <param id="0" name="Frame number">bullets</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901573412304001">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="788063633264542" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="611669545598466" type="mira">
+                            <param id="0" name="X">mouse.X</param>
+                            <param id="1" name="Y">mouse.Y</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="310322446748246" type="canhao">
+                            <param id="0" name="X">mira.X</param>
+                            <param id="1" name="Y">mira.y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="780334581967605" title="bullet">
+            <sub-events>
+                <event-block sid="702384227233173">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="930260334333162" type="bala">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="303002790936327" type="Enemy1" />
+                        <action id="-9" name="Destroy" sid="270414094173084" type="bala" />
+                    </actions>
+                </event-block>
+                <event-block sid="947465800596276">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="114143319163323" type="bala" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="131148285087162" type="bala" />
+                    </actions>
+                </event-block>
+                <event-block sid="724496291887931">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="368594888983176" type="System" />
+                        <condition id="-8" name="Compare two values" sid="830042754160281" type="System">
+                            <param id="0" name="First value">bullets</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="830802365071165" type="hud_bullet">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="514105655618815" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="290263268934812" type="System">
+                            <param id="0" name="Variable">bullets</param>
+                            <param id="1" name="Value">max_bullets</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

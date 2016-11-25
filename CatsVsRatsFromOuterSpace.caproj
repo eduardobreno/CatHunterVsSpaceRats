@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>CatsVsRatsFromOuterSpace</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>24ph6abamjwiv</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="148095316621040">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905385416438922" speed="5">
+                    <frame duration="1" hotspotX="0.49961" hotspotY="0.500694" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\background_cathunter-38.png">
+                        <collision-poly>
+                            <point x="0.00078064" y="0.00138696" />
+                            <point x="1" y="0" />
+                            <point x="0.999219" y="0.998613" />
+                            <point x="0.00078064" y="0.998613" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall1" sid="602260305699352">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="214361150782169">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937466459957167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall2" sid="407613850376493">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="381543450249694">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="111295775272055" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall3" sid="915108295783592">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="876209074331549">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876269818386318" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="House" sid="831794475894024">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="318060065980339">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268350119270041" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawn1" sid="373909955105060">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841491347390560" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawn2" sid="395418383579411">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849073276844023" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy1" sid="266561449952563">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="818448136635580">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="339662955693901">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="327889520670472">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871735987281373" speed="5">
+                    <frame duration="1" hotspotX="0.498168" hotspotY="0.494048" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-32.png">
+                        <collision-poly>
+                            <point x="0.996337" y="0.917452" />
+                            <point x="0.003663" y="0.917452" />
+                            <point x="0.190688" y="0.0978683" />
+                            <point x="0.833289" y="0.0902086" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawn3" sid="116348739087813">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="294802029384295" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawn4" sid="887601744284864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730077415202501" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyKing" sid="875993475530398">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="232116078775906">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517115061992593" speed="5">
+                    <frame duration="1" hotspotX="0.497738" hotspotY="0.527972" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-34.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnKing1" sid="968338676684211">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438544335103028" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnKing2" sid="493182089068847">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435763815820753" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="canhao" sid="801503067096837">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966127578474082" speed="5">
+                    <frame duration="1" hotspotX="0.0285714" hotspotY="0.563636" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\canhao_cathunter_ver_hor-40.png">
+                        <image-point name="Imagepoint 1" x="0.985714" y="0.472727" />
+                        <collision-poly>
+                            <point x="0.416667" y="0.31746" />
+                            <point x="0.5" y="0.230159" />
+                            <point x="0.927083" y="0.0555556" />
+                            <point x="0.770833" y="0.5" />
+                            <point x="0.5" y="0.896825" />
+                            <point x="0.0833333" y="0.936508" />
+                            <point x="0.208333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="796275848419434">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="mira" sid="603069644102235">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945314469387487" speed="5">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.50505" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\mira_cathunter-39.png">
+                        <collision-poly>
+                            <point x="0.281746" y="0.281746" />
+                            <point x="0.5" y="0.00793651" />
+                            <point x="0.718254" y="0.281746" />
+                            <point x="0.996032" y="0.5" />
+                            <point x="0.718254" y="0.718254" />
+                            <point x="0.5" y="0.996032" />
+                            <point x="0.281746" y="0.718254" />
+                            <point x="0.00793651" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bala" sid="282604754599085">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="126702678765081">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980106082494407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-14.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.920309" y="0.0735482" />
+                            <point x="0.987981" y="0.458333" />
+                            <point x="0.626311" y="0.959912" />
+                            <point x="0.348558" y="0.944444" />
+                            <point x="0.122596" y="0.878472" />
+                            <point x="0.0265877" y="0.493056" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_creditos" sid="556709453976394">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="spr_start_game" sid="328593333422218">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\novosassets_cathunter-52.png" />
+        </object-type>
+        <object-type name="Audio" sid="232853174307032">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="LocalStorage" sid="232601997337027">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="stopPoint" sid="499163904247705">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412807882295089" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOver" sid="957147663615674">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TryAgain" sid="580174031241949">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="hero" sid="369232661510799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132562993355146" speed="5">
+                    <frame duration="1" hotspotX="0.504065" hotspotY="0.5" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-29.png">
+                        <collision-poly>
+                            <point x="0.0731707" y="0.0633803" />
+                            <point x="0.495935" y="0.0211268" />
+                            <point x="0.577236" y="0.366197" />
+                            <point x="0.617886" y="0.5" />
+                            <point x="0.926829" y="0.93662" />
+                            <point x="0.495935" y="0.964789" />
+                            <point x="0.186992" y="0.838028" />
+                            <point x="0.0243902" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502857" hotspotY="0.503145" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\novosassets_cathunter-44.png">
+                        <collision-poly>
+                            <point x="0.222857" y="0.245283" />
+                            <point x="0.497143" y="0.0314465" />
+                            <point x="0.794286" y="0.226415" />
+                            <point x="0.742857" y="0.496855" />
+                            <point x="0.971429" y="0.968553" />
+                            <point x="0.497143" y="0.924528" />
+                            <point x="0.24" y="0.735849" />
+                            <point x="0.0857143" y="0.496855" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.503145" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-26.png">
+                        <collision-poly>
+                            <point x="0.15311" y="0.201258" />
+                            <point x="0.497608" y="0.0251572" />
+                            <point x="0.84689" y="0.201258" />
+                            <point x="0.91866" y="0.496855" />
+                            <point x="0.684211" y="0.584906" />
+                            <point x="0.497608" y="0.893082" />
+                            <point x="0.30622" y="0.597484" />
+                            <point x="0.0861244" y="0.496855" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-30.png">
+                        <collision-poly>
+                            <point x="0.0725806" y="0.0633803" />
+                            <point x="0.5" y="0.0211268" />
+                            <point x="0.572581" y="0.373239" />
+                            <point x="0.620968" y="0.5" />
+                            <point x="0.927419" y="0.93662" />
+                            <point x="0.5" y="0.964789" />
+                            <point x="0.193548" y="0.830986" />
+                            <point x="0.0241935" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="canhao_roda" sid="731750527625727">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270123223979762" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-31.png">
+                        <collision-poly>
+                            <point x="0.178571" y="0.0980392" />
+                            <point x="0.5" y="0.0196078" />
+                            <point x="0.785714" y="0.117647" />
+                            <point x="0.964286" y="0.490196" />
+                            <point x="0.785714" y="0.882353" />
+                            <point x="0.5" y="1" />
+                            <point x="0.178571" y="0.901961" />
+                            <point x="0" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="561804839617899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="560811639769319" speed="5">
+                    <frame duration="1" hotspotX="0.560976" hotspotY="0.507576" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-24.png">
+                        <collision-poly>
+                            <point x="0.0609756" y="0.0378788" />
+                            <point x="0.780488" y="0.136364" />
+                            <point x="0.939024" y="0.5" />
+                            <point x="0.853659" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.170732" y="0.893939" />
+                            <point x="0.231707" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shot_hud" sid="116002455472759">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979707565091831" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505747" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-18.png">
+                        <collision-poly>
+                            <point x="0.0240385" y="0.0574713" />
+                            <point x="0.5" y="0" />
+                            <point x="0.975962" y="0.0574713" />
+                            <point x="0.995192" y="0.494253" />
+                            <point x="0.975962" y="0.942529" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0240385" y="0.942529" />
+                            <point x="0" y="0.494253" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bullets_hud" sid="364065275872697">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451790953819220" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-14.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-15.png" />
+                    <frame duration="1" hotspotX="0.502994" hotspotY="0.5" original-source="C:\Users\Eduardo Freitas\Downloads\Assets_CatHunter\cathunter-16.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background_menu" sid="963828229741964">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613205267718031" speed="5">
+                    <frame duration="1" hotspotX="0.497268" hotspotY="0.495845" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\novosassets_cathunter-53.png">
+                        <collision-poly>
+                            <point x="0" y="3.85808e-006" />
+                            <point x="0.996086" y="0" />
+                            <point x="0.998435" y="0.99722" />
+                            <point x="0" y="0.991657" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="684081266801328">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543696213665884" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy2" sid="361056149459084">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="603933842545299" speed="5">
+                    <frame duration="1" hotspotX="0.502242" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-35.png">
+                        <collision-poly>
+                            <point x="0.991031" y="0.5" />
+                            <point x="0.820628" y="0.759036" />
+                            <point x="0.502242" y="0.939759" />
+                            <point x="0.188341" y="0.746988" />
+                            <point x="0.0493274" y="0.5" />
+                            <point x="0.143498" y="0.192771" />
+                            <point x="0.502242" y="0.210843" />
+                            <point x="0.775785" y="0.301205" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hit_hud" sid="697341707352875">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803481661437803" speed="5">
+                    <frame duration="1" hotspotX="0.500858" hotspotY="0.505747" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-19.png">
+                        <collision-poly>
+                            <point x="0.00857633" y="0.0574713" />
+                            <point x="0.499142" y="0" />
+                            <point x="0.991424" y="0.0574713" />
+                            <point x="0.991424" y="0.942529" />
+                            <point x="0.499142" y="1" />
+                            <point x="0.00857633" y="0.942529" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="score_hud" sid="595302830177615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114536880255518" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505747" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-20.png">
+                        <collision-poly>
+                            <point x="0.0240385" y="0.0574713" />
+                            <point x="0.5" y="0" />
+                            <point x="0.975962" y="0.0574713" />
+                            <point x="0.995192" y="0.494253" />
+                            <point x="0.975962" y="0.942529" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0240385" y="0.942529" />
+                            <point x="0" y="0.494253" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hit_count_hud" sid="320495090243234">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="919089381733593" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="411265349167452">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757201148394705" speed="5">
+                    <frame duration="1" hotspotX="0.50237" hotspotY="0.503106" original-source="D:\Dropbox\UEA\LJE02 - Introdução a Programação de Jogos Eletrônicos\Assets_CatHunter\cathunter-26.png">
+                        <collision-poly>
+                            <point x="0.156398" y="0.204969" />
+                            <point x="0.49763" y="0.0310559" />
+                            <point x="0.843602" y="0.204969" />
+                            <point x="0.914692" y="0.496894" />
+                            <point x="0.682464" y="0.583851" />
+                            <point x="0.49763" y="0.888199" />
+                            <point x="0.308057" y="0.596273" />
+                            <point x="0.0900474" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyKidnapper" sid="377731908718008">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="403284040173055">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="647071254261205" speed="5">
+                    <frame duration="1" hotspotX="0.502024" hotspotY="0.497355" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\cathunter-33.png">
+                        <collision-poly>
+                            <point x="0.214575" y="0.719577" />
+                            <point x="0.267206" y="0.502645" />
+                            <point x="0.210526" y="0.275132" />
+                            <point x="0.497976" y="0.00529099" />
+                            <point x="0.728745" y="0.354497" />
+                            <point x="1" y="0.502645" />
+                            <point x="0.728745" y="0.645503" />
+                            <point x="0.497976" y="0.994709" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnKidnapper1" sid="559501381005445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723230153132250" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnKidnapper2" sid="749741426301681">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289192958681313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="takenLight" sid="362681455668934">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431874920298137" speed="5">
+                    <frame duration="1" hotspotX="0.502008" hotspotY="0.5" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\cathunter-17.png">
+                        <collision-poly>
+                            <point x="0.293173" y="0.165909" />
+                            <point x="0.497992" y="0.0113636" />
+                            <point x="0.666667" y="0.188636" />
+                            <point x="0.995984" y="0.997727" />
+                            <point x="0.00401606" y="0.997727" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="stopPointTaken" sid="297063848508588">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549926737161057" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="scoreText" sid="251104632258013">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="scoreTextSprite" sid="408888490791546">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="textBox" sid="217142499700999">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519548747759228" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="newGame" sid="478814946001042">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850234903642968" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\novosassets_cathunter-52.png">
+                        <collision-poly>
+                            <point x="0.014652" y="0.0615385" />
+                            <point x="0.5" y="0" />
+                            <point x="0.983516" y="0.0692308" />
+                            <point x="0.998168" y="0.5" />
+                            <point x="0.983516" y="0.930769" />
+                            <point x="0.5" y="1" />
+                            <point x="0.014652" y="0.938462" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOverSprite" sid="886186748000528">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315070901564155" speed="5">
+                    <frame duration="1" hotspotX="0.500832" hotspotY="0.5" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\novosassets_cathunter-50.png">
+                        <collision-poly>
+                            <point x="0.0166389" y="0.0588235" />
+                            <point x="0.499168" y="0.00588235" />
+                            <point x="0.983361" y="0.0588235" />
+                            <point x="0.998336" y="0.5" />
+                            <point x="0.983361" y="0.941176" />
+                            <point x="0.499168" y="0.994118" />
+                            <point x="0.0183028" y="0.935294" />
+                            <point x="0.00166389" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="team" sid="193779942721982">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990854490288327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\nomes-55.png">
+                        <collision-poly>
+                            <point x="0.00488599" y="0.26087" />
+                            <point x="0.5" y="0.565217" />
+                            <point x="0.995114" y="0.26087" />
+                            <point x="0.995928" y="0.782609" />
+                            <point x="0.5" y="0.652174" />
+                            <point x="0.00651466" y="0.652174" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tryAgainSprite" sid="171836529674556">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="704483283673892" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\tryagainr-56.png">
+                        <collision-poly>
+                            <point x="0.014652" y="0.0615385" />
+                            <point x="0.5" y="0" />
+                            <point x="0.985348" y="0.0615385" />
+                            <point x="1" y="0.5" />
+                            <point x="0.985348" y="0.938462" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0164835" y="0.930769" />
+                            <point x="0.0018315" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy3" sid="909969468740349">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="704845617185914">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="906266408984760">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706992398748220" speed="5">
+                    <frame duration="1" hotspotX="0.502304" hotspotY="0.503759" original-source="C:\Repositorio\CatsVsRatsFromOuterSpace\Assets\jogo_mod2_cathunter-57.png">
+                        <collision-poly>
+                            <point x="0.746544" y="0.496241" />
+                            <point x="0.815668" y="0.699248" />
+                            <point x="0.502304" y="0.984962" />
+                            <point x="0.170507" y="0.721804" />
+                            <point x="0.225806" y="0.496241" />
+                            <point x="0.281106" y="0.458647" />
+                            <point x="0.502304" y="0.075188" />
+                            <point x="0.732719" y="0.43609" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_time" sid="581960013113484">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="scoreTimeSprite" sid="271825620156446">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>menu.xml</layout>
+        <layout>game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event_game.xml</event-sheet>
+        <event-sheet>Event_menu.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="14" />
+        <global-instance type="Audio" uid="21">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="22" />
+    </global-instances>
+    <sounds-folder>
+        <file name="rato_ouch.m4a" />
+        <file name="rato_ouch.ogg" />
+        <file name="321044__littlerobotsoundfactory__loop-little-big-adventure-01.m4a" />
+        <file name="321044__littlerobotsoundfactory__loop-little-big-adventure-01.ogg" />
+        <file name="Alien_AlarmDrum-KevanGC-893953959.m4a" />
+        <file name="Alien_AlarmDrum-KevanGC-893953959.ogg" />
+        <file name="328831__dinodilopho__laughing-robot-monster.m4a" />
+        <file name="328831__dinodilopho__laughing-robot-monster.ogg" />
+        <file name="238954_qubodup_game-over.ogg" />
+        <file name="238954_qubodup_game-over.m4a" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

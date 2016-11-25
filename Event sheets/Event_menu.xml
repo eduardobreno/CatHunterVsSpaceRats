@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_menu</name>
+    <events>
+        <event-block sid="311199312174754">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="536606057249021" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="175149963401844" type="Mouse">
+                    <param id="0" name="Sprite">mira</param>
+                </action>
+                <action id="0" name="Play" sid="178394214835230" type="Audio">
+                    <param id="0" name="Audio file">Alien_AlarmDrum-KevanGC-893953959</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;start_sound&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="871587969275374">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="201754048524611" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">newGame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="589615812308389" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="686009888305694">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="100995164970766" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="993158870001489" type="spr_start_game">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="849011924936025" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="225076876609659" type="spr_start_game">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="412915406566293">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="434983934447850" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="982583022874044" type="mira">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
